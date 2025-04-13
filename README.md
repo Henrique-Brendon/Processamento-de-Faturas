@@ -58,3 +58,50 @@ app.datasource.password=123456
 
 # Inicializar tabelas do Spring Batch
 spring.batch.jdbc.initialize-schema=always
+```
+
+## ▶️ Executando o Job
+O job é executado automaticamente na inicialização da aplicação.
+
+Se desejar rodar manualmente, você pode criar um CommandLineRunner ou utilizar JobLauncher.
+
+## 📂 Saída dos Arquivos
+Os arquivos .txt são gerados no diretório:
+
+* bash
+* Copiar
+* Editar
+* files/fatura/
+
+Cada arquivo contém:
+
+* Nome e endereço do cliente
+
+* Número do cartão
+
+* Lista formatada de transações
+
+* Totalizador no rodapé
+
+Exemplo de nome do arquivo: 0.txt, 1.txt, 2.txt, ...
+
+## ✅ Requisitos
+* Java 17+
+
+* MySQL
+
+* Maven
+
+## 🧪 Testes
+Em desenvolvimento. Futuramente, serão adicionados testes unitários para os componentes do Spring Batch e integração com base de dados e arquivos.
+
+## 📌 Possíveis melhorias
+Parametrização do diretório de saída via application.properties
+
+Paginação e paralelismo na leitura
+
+Tratamento de falhas e SkipPolicy
+
+Relatórios em PDF com JasperReports
+
+
